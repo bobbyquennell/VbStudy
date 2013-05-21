@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SortingAlgorithm
+</name>
+</assembly>
+<members>
+<member name="M:SortingAlgorithm.Form1.CountArrayLength(System.String)">
+	<summary>
+ Count the characters in a block of text
+ </summary>
+ param name: text the tring
+ <remarks></remarks>
+</member>
+</members>
+</doc>

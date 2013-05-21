@@ -1,0 +1,30 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SortingAlgorithm
+</name>
+</assembly>
+<members>
+<member name="M:SortingAlgorithm.Form1.CountArrayLength(System.String)">
+	<summary>
+ Count the characters in a block of text
+ </summary>
+ param name: text the tring
+ <remarks></remarks>
+</member><member name="P:SortingAlgorithm.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:SortingAlgorithm.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:SortingAlgorithm.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>
