@@ -9,3 +9,14 @@ C:\Documents and Settings\Bobby\Desktop\SortingAlgorithm\SortingAlgorithm\obj\De
 C:\Documents and Settings\Bobby\Desktop\SortingAlgorithm\SortingAlgorithm\obj\Debug\SortingAlgorithm.Resources.resources
 C:\Documents and Settings\Bobby\Desktop\SortingAlgorithm\SortingAlgorithm\obj\Debug\GenerateResource.read.1.tlog
 C:\Documents and Settings\Bobby\Desktop\SortingAlgorithm\SortingAlgorithm\obj\Debug\GenerateResource.write.1.tlog
+E:\cygwin\home\Bobby\VbStudy\SortingAlgorithm\SortingAlgorithm\obj\Debug\SortingAlgorithm.exe
+E:\cygwin\home\Bobby\VbStudy\SortingAlgorithm\SortingAlgorithm\obj\Debug\SortingAlgorithm.xml
+E:\cygwin\home\Bobby\VbStudy\SortingAlgorithm\SortingAlgorithm\obj\Debug\SortingAlgorithm.pdb
+E:\cygwin\home\Bobby\VbStudy\SortingAlgorithm\SortingAlgorithm\bin\Debug\SortingAlgorithm.exe
+E:\cygwin\home\Bobby\VbStudy\SortingAlgorithm\SortingAlgorithm\bin\Debug\SortingAlgorithm.pdb
+E:\cygwin\home\Bobby\VbStudy\SortingAlgorithm\SortingAlgorithm\bin\Debug\SortingAlgorithm.xml
+E:\cygwin\home\Bobby\VbStudy\SortingAlgorithm\SortingAlgorithm\obj\Debug\ResolveAssemblyReference.cache
+E:\cygwin\home\Bobby\VbStudy\SortingAlgorithm\SortingAlgorithm\obj\Debug\SortingAlgorithm.Form1.resources
+E:\cygwin\home\Bobby\VbStudy\SortingAlgorithm\SortingAlgorithm\obj\Debug\SortingAlgorithm.Resources.resources
+E:\cygwin\home\Bobby\VbStudy\SortingAlgorithm\SortingAlgorithm\obj\Debug\GenerateResource.read.1.tlog
+E:\cygwin\home\Bobby\VbStudy\SortingAlgorithm\SortingAlgorithm\obj\Debug\GenerateResource.write.1.tlog

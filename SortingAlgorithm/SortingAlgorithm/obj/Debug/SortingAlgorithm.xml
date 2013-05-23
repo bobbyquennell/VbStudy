@@ -6,13 +6,7 @@ SortingAlgorithm
 </name>
 </assembly>
 <members>
-<member name="M:SortingAlgorithm.Form1.CountArrayLength(System.String)">
-	<summary>
- Count the characters in a block of text
- </summary>
- param name: text the tring
- <remarks></remarks>
-</member><member name="P:SortingAlgorithm.My.Resources.Resources.ResourceManager">
+<member name="P:SortingAlgorithm.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>
