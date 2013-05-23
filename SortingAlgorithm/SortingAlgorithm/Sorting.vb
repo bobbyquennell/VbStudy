@@ -83,7 +83,7 @@ Public Class Sorting
                                 m_Buffer(j - 1) = t
                             End If
                         Next
-                        '将排序结果显示在TextBox上
+                        '将排序结果输出到m_Text上
                         m_Text = m_Text + Str(m_Buffer(i))
                     Next
                 Case SelectedAlgorithm.Selection
@@ -95,11 +95,11 @@ Public Class Sorting
                         Next
                         '交换数组元素，使最小的元素排在第一位
                         t = m_Buffer(k) : m_Buffer(k) = m_Buffer(i) : m_Buffer(i) = t
-                        '将排序结果显示在TextBox上
+                        '将排序结果输出到m_Text上
                         m_Text = m_Text + Str(m_Buffer(i))
                     Next
                 Case SelectedAlgorithm.Merge
-                    MsgBox("TBD sdfsd :P")
+                    MsgBox("TBD :P")
 
             End Select
             Return True
