@@ -43,73 +43,70 @@ Public Class Sorting
         m_SelectedAlgorithm = SelectedAlgorithm.Bubble
         'm_Text = ""
     End Sub
-    Public Function SetBufferLen(ByVal len As Integer) As Boolean
-        If len > 0 Then
-            m_BufferLength = len
-            ReDim m_Buffer(m_BufferLength - 1)
-            m_BufferState = BufferState.UnInitialized
-            Return True
-        Else
-            Return False
+    Public Sub SetBufferLen(ByVal len As Integer)
+        If len <= 0 Then
+            Throw New ArgumentException("SetBufferLen: len <= 0")
         End If
-    End Function
+
+        m_BufferLength = len
+        ReDim m_Buffer(m_BufferLength - 1)
+        m_BufferState = BufferState.UnInitialized
+
+    End Sub
     Public Sub FillBuffer(ByVal array() As Integer, ByVal len As Integer)
         Dim i As Integer
-        If len = m_BufferLength Then
-            For i = 0 To m_BufferLength - 1
-                m_Buffer(i) = array(i)
-            Next
-            m_BufferState = BufferState.Initialized
-        Else
-            MessageBox.Show("Warning: data length is invalid")
+        If Not len = m_BufferLength Then
             m_BufferState = BufferState.UnInitialized
+            Throw New ArgumentException("FillBuffer: data length is different with m_BufferLength")
         End If
+
+        For i = 0 To m_BufferLength - 1
+            m_Buffer(i) = array(i)
+        Next
+        m_BufferState = BufferState.Initialized
+
     End Sub
 
-    Public Function Sorting() As Boolean
+    Public Sub Sorting()
         'check buffer state
-        If m_BufferState = BufferState.Initialized Then
-            Dim k, n, i, j, t As Integer
-            n = m_BufferLength
-            m_Text = ""
-            Select Case m_SelectedAlgorithm
-                Case SelectedAlgorithm.Bubble
-                    '冒泡排序法
-                    For i = 0 To n - 1
-                        For j = n - 1 To i + 1 Step -1
-                            If m_Buffer(j - 1) > m_Buffer(j) Then    '相邻元素比较
-                                t = m_Buffer(j)
-                                m_Buffer(j) = m_Buffer(j - 1)
-                                m_Buffer(j - 1) = t
-                            End If
-                        Next
-                        '将排序结果输出到m_Text上
-                        m_Text = m_Text + Str(m_Buffer(i))
-                    Next
-                Case SelectedAlgorithm.Selection
-                    '选择排序法
-                    For i = 0 To n - 1
-                        k = i
-                        For j = i + 1 To n - 1
-                            If m_Buffer(k) > m_Buffer(j) Then k = j '找出最小值的下标
-                        Next
-                        '交换数组元素，使最小的元素排在第一位
-                        t = m_Buffer(k) : m_Buffer(k) = m_Buffer(i) : m_Buffer(i) = t
-                        '将排序结果输出到m_Text上
-                        m_Text = m_Text + Str(m_Buffer(i))
-                    Next
-                Case SelectedAlgorithm.Merge
-                    MsgBox("TBD :P")
-
-            End Select
-            Return True
-        Else
-            MessageBox.Show("Warning: No data to be sorted")
-            Return False
-
+        If Not m_BufferState = BufferState.Initialized Then
+            Throw New DataException(" Sorting.Sorting(): No data to be sorted ")
         End If
+        Dim k, n, i, j, t As Integer
+        n = m_BufferLength
+        m_Text = ""
+        Select Case m_SelectedAlgorithm
+            Case SelectedAlgorithm.Bubble
+                '冒泡排序法
+                For i = 0 To n - 1
+                    For j = n - 1 To i + 1 Step -1
+                        If m_Buffer(j - 1) > m_Buffer(j) Then    '相邻元素比较
+                            t = m_Buffer(j)
+                            m_Buffer(j) = m_Buffer(j - 1)
+                            m_Buffer(j - 1) = t
+                        End If
+                    Next
+                    '将排序结果输出到m_Text上
+                    m_Text = m_Text + Str(m_Buffer(i))
+                Next
+            Case SelectedAlgorithm.Selection
+                '选择排序法
+                For i = 0 To n - 1
+                    k = i
+                    For j = i + 1 To n - 1
+                        If m_Buffer(k) > m_Buffer(j) Then k = j '找出最小值的下标
+                    Next
+                    '交换数组元素，使最小的元素排在第一位
+                    t = m_Buffer(k) : m_Buffer(k) = m_Buffer(i) : m_Buffer(i) = t
+                    '将排序结果输出到m_Text上
+                    m_Text = m_Text + Str(m_Buffer(i))
+                Next
+            Case SelectedAlgorithm.Merge
+                MsgBox("TBD :P")
 
-    End Function
+        End Select
+
+    End Sub
 
     Public Sub BufferDumping(ByRef text As String)
         'Dim i As Integer
